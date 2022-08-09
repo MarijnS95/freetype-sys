@@ -14,7 +14,10 @@ homepage = "https://github.com/PistonDevelopers/freetype-sys"
 
 [build-dependencies]
 pkg-config = "0.3.11"
-cmake = "0.1.42"
+cmake = { version = "0.1.42", optional = true }
 
 [dependencies]
 libc = "0.2.42"
+
+[features]
+cmake = ["dep:cmake"]
